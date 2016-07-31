@@ -1,5 +1,34 @@
 [
-    {"name": "Test 1", "order": 1, "done": false},
-    {"name": "Test 2", "order": 2, "done": false},
-    {"name": "Test 3", "order": 3, "done": false}
+    {
+        "name": "Thai Flavors",
+        "address": "1254 E 14th St, Des Moines, IA 50316",
+        "phone": "(515) 262-4658",
+        "tags": ["thai", "des moines"],
+        "cuisines": ["thai"]
+    },
+    {
+        "name": "Blu Thai Food and Sushi",
+        "address": "215 E Walnut St, Des Moines, IA 50309",
+        "phone": "(515) 528-2407",
+        "menu": "https://m.facebook.com/BLU-Thai-Sushi-Restaurant-513655235384456/menu/?p_ref=pa",
+        "tags": ["thai", "sushi", "des moines", "east village"],
+        "cuisines": ["thai"]
+    },
+    {
+        "name": "Royal Mile",
+        "address": "210 4th St, Des Moines, IA 50309",
+        "phone": "(515) 280-3771",
+        "menu": "royalmilebar.com",
+        "hours": [
+            {"Sunday": "10AM-2AM"},
+            {"Monday": "11AM-2AM"},
+            {"Tuesday": "11AM-2AM"},
+            {"Wednesday": "11AM-2AM"},
+            {"Thursday": "11AM-2AM"},
+            {"Friday": "11AM-2AM"},
+            {"Saturday": "8AM-2AM"}
+        ],
+        "tags": ["bar","pub", "british", "ale", "guinness"],
+        "cuisines": ["british", "american"]
+    }
 ]

@@ -1,0 +1,76 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	color: #333333;
+	width: 768px;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}
+
+header h1 {
+	text-align: center;
+}
+
+#main {
+	display: none;
+}
+
+#main #cuisine-list li {
+	display: inline;
+	padding-right: 20px;
+}
+
+#main #cuisine-list li a {
+	background-color: #eeeeee;
+	border: 1px solid #cecece;
+	border-radius: 5px;
+	padding: 7px;
+	text-decoration: none;
+}
+
+#main #cuisine-list li a,
+#main #cuisine-list li a:visited {
+	color:#000;
+}
+
+#main #cuisine-list,
+#main #eatery-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+#main #eatery-list .eatery {
+	display: block;
+	border: 1px solid #cecece;
+	border-radius: 5px;
+	margin: 5px 0;
+}
+
+#main #eatery-list .eatery .summary .label {
+	padding: 20px 10px;
+}
+
+#main #eatery-list .eatery .summary a {
+	float: right;
+}
+
+#main #eatery-list .eatery .summary a .icon {
+	padding-top: 20px;
+	margin: 0 15px;
+}
+
+#main #eatery-list .eatery .details {
+	display: none;
+	padding: 0 10px 20px 10px;
+}
+
+#main #eatery-list .eatery .icon {
+	height: 20px;
+	width: 20px;
+}

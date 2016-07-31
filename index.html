@@ -3,19 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Backbone.js Todos</title>
-  <link rel="stylesheet" href="todos.css"/>
+  <title>Eallary</title>
+  <link rel="stylesheet" href="app.css" />
 </head>
 
 <body>
 
-  <div id="eallaryapp">
+  <div id="eallary-app">
 
     <header>
       <h1>Eallary</h1>
     </header>
 
     <section id="main">
+      <ul id="cuisine-list"></ul>
       <ul id="eatery-list"></ul>
     </section>
 
@@ -28,22 +29,46 @@
   <script src="./support/underscore.js"></script>
   <script src="./support/backbone.js"></script>
   <script src="./support/backbone.localStorage.js"></script>
-  <script src="todos.js"></script>
+  <script src="app.js"></script>
 
   <!-- Templates -->
 
   <script type="text/template" id="item-template">
-    <div class="view">
-      <label><%- name %></label>
+    <div class="summary">
+      <a href="tel:<%- phone %>"  target="_blank">
+        <svg class="icon phone-icon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </a>
+      <a href="http://maps.google.com/?q=<%- address %>"  target="_blank">
+        <svg class="icon map-icon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </a>
+      <div class="label"><%- name %></div>
+    </div>
+    
+    <div class="details">
+      <a href="tel:<%- phone %>" target="_blank">
+        <svg class="icon phone-icon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        <%- phone %>
+      </a>
+      <br/>
+      <a href="http://maps.google.com/?q=<%- address %>"  target="_blank">
+        <svg class="icon map-icon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+        <%- address %>
+      </a>
     </div>
   </script>
 
-  <script type="text/template" id="stats-template">
-    <% if (done) { %>
-      <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
-    <% } %>
-    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
-  </script>
+</body>
 
-  </body>
 </html>
