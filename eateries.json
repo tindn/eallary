@@ -12,7 +12,7 @@
         "phone": "(515) 528-2407",
         "menu": "https://m.facebook.com/BLU-Thai-Sushi-Restaurant-513655235384456/menu/?p_ref=pa",
         "tags": ["thai", "sushi", "des moines", "east village"],
-        "cuisines": ["thai"]
+        "cuisines": ["thai", "sushi"]
     },
     {
         "name": "Royal Mile",
@@ -30,5 +30,22 @@
         ],
         "tags": ["bar","pub", "british", "ale", "guinness"],
         "cuisines": ["british", "american"]
+    },
+    {
+        "name": "Pho All Seasons",
+        "address": "1311 E Euclid Ave, Des Moines, IA 50316",
+        "phone": "515) 330-1840",
+        "menu": "places.singleplatform.com/pho-all-seasons/menu",
+        "hours": [
+            {"Sunday": "10AM-9PM"},
+            {"Monday": "10AM-3PM"},
+            {"Tuesday": "10AM-9PM"},
+            {"Wednesday": "10AM-9PM"},
+            {"Thursday": "10AM-9PM"},
+            {"Friday": "10AM-9PM"},
+            {"Saturday": "10AM-9PM"}
+        ],
+        "tags": [],
+        "cuisines": ["vietnamese"]
     }
 ]
