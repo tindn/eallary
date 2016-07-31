@@ -34,8 +34,8 @@
     {
         "name": "Pho All Seasons",
         "address": "1311 E Euclid Ave, Des Moines, IA 50316",
-        "phone": "515) 330-1840",
-        "menu": "places.singleplatform.com/pho-all-seasons/menu",
+        "phone": "(515) 330-1840",
+        "menu": "http://places.singleplatform.com/pho-all-seasons/menu",
         "hours": [
             {"Sunday": "10AM-9PM"},
             {"Monday": "10AM-3PM"},
@@ -47,5 +47,56 @@
         ],
         "tags": [],
         "cuisines": ["vietnamese"]
+    },
+    {
+        "name": "Shanghai Chinese Restaurant",
+        "address": "33 NE Carefree Ln, Waukee, IA 50263",
+        "phone": "(515) 987-3111",
+        "menu": "http://www.shanghaiwk.com/menus/carryout.pdf",
+        "hours": [
+            {"Sunday": "11AM-9PM"},
+            {"Monday": "Closed"},
+            {"Tuesday": "11AM-9PM"},
+            {"Wednesday": "11AM-9PM"},
+            {"Thursday": "11AM-9PM"},
+            {"Friday": "11AM-9:30PM"},
+            {"Saturday": "11AM-9:30PM"}
+        ],
+        "tags": [],
+        "cuisines": ["vietnamese", "chinese"]
+    },
+    {
+        "name": "Jesse's Embers",
+        "address": "3301 Ingersoll Ave, Des Moines, IA 50312",
+        "phone": "(515) 255-6011",
+        "menu": "http://places.singleplatform.com/jesses-embers/menu",
+        "hours": [
+            {"Sunday": "Closed"},
+            {"Monday": "11AM-10PM"},
+            {"Tuesday": "11AM-10PM"},
+            {"Wednesday": "11AM-10PM"},
+            {"Thursday": "11AM-10PM"},
+            {"Friday": "11AM-10PM"},
+            {"Saturday": "5PM-10PM"}
+        ],
+        "tags": ["burgers"],
+        "cuisines": ["american"]
+    },
+    {
+        "name": "Eatery A",
+        "address": "2932 Ingersoll Ave, Des Moines, IA 50312",
+        "phone": "(515) 282-8085",
+        "menu": "http://www.opentable.com/eatery-a",
+        "hours": [
+            {"Sunday": "10AM-10PM"},
+            {"Monday": "3PM-11PM"},
+            {"Tuesday": "3PM-11PM"},
+            {"Wednesday": "3PM-11PM"},
+            {"Thursday": "3PM-11PM"},
+            {"Friday": "10AM-12AM"},
+            {"Saturday": "10AM-12AM"}
+        ],
+        "tags": ["burgers", "pizza", "happy hour", "bar"],
+        "cuisines": ["mediterranean", "american"]
     }
 ]
