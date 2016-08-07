@@ -61,11 +61,7 @@ header h1 {
 
 #main #eatery-list .eatery .summary a {
 	float: right;
-}
-
-#main #eatery-list .eatery .summary a .icon {
-	padding-top: 20px;
-	margin: 0 15px;
+	margin: 20px;
 }
 
 #main #eatery-list .eatery .details {
