@@ -55,6 +55,7 @@ $(function(){
 
   var Eateries = new EateryCollection;
 
+
   var EateryView = Backbone.View.extend({
 
     tagName:  "li",
@@ -86,19 +87,70 @@ $(function(){
 
   });
 
+  var CuisineFilter = Backbone.Model.extend({
+
+    defaults: {
+        display: "All",
+        filter: "all",
+        isSet: true
+    }
+
+  });
+
+  var CuisineFilterCollection = Backbone.Collection.extend({
+
+    model: CuisineFilter,
+
+    getSetFilters: function() {
+      return this.models.filter(function(cuisine) { return cuisine.get("isSet"); });
+    }
+
+  });
+
+  var CuisineFilters = new CuisineFilterCollection;
+
+  var CuisineFilterView = Backbone.View.extend({
+
+    tagName: "li",
+
+    template: _.template($('#cuisine-filter-template').html()),
+
+    initialize: function() {
+      this.listenTo(this.model, 'change', this.render);
+    },
+
+    events: {
+      "click .filter": "filterClicked"
+    },
+
+    render: function() {
+      this.$el.html(this.template(this.model.toJSON()));
+      return this;
+    },
+
+    filterClicked: function(event) {
+      this.model.set("isSet",!this.model.attributes.isSet);
+      this.trigger("filterClicked", CuisineFilters.getSetFilters().reduce(function(prev, curr){
+        prev.push(curr.get("filter"));
+        return prev;
+      },[]));
+    }
+
+  });
+
   var AppView = Backbone.View.extend({
 
     el: $("#eallary-app"),
 
     events: {
-      "click #cuisine-list li a": "filterCuisine"
     },
 
     initialize: function() {
 
-      this.listenTo(Eateries, 'add', this.addOne);
-      this.listenTo(Eateries, 'reset', this.addAll);
+      this.listenTo(Eateries, 'add', this.addEatery);
+      this.listenTo(Eateries, 'reset', this.addEateries);
       this.listenTo(Eateries, 'all', this.render);
+      this.listenTo(CuisineFilters, 'add', this.addFilter);
 
       this.footer = this.$('footer');
       this.main = $('#main');
@@ -106,26 +158,44 @@ $(function(){
       Eateries.fetch({
         success: this.setCuisines
       });
+
     },
 
     setCuisines: function(cuisines) {
       var cuisines = Eateries.getCuisines();
-      cuisines.splice(0,0,"all");
-      cuisines.forEach(function(current, index, array) {
-        $("#cuisine-list").append("<li><a href='#' data-filter='"+current+"'>"+ current + "</a></li>");
-      });
+      var cuisinesModels = cuisines.reduce(function(previousArray, current) {
+        previousArray.push(new CuisineFilter({
+          display: current,
+          filter: current,
+          isSet: false
+        }));
+        return previousArray;
+      }, []);
+
+      CuisineFilters.set(cuisinesModels);
     },
 
-    filterCuisine: function(event) {
-      var value = $(event.currentTarget).data('filter');
-      if (value === "all")
+    updateEateries: function(filters) {
+      if (filters.length == 0 || filters.indexOf("all") != -1)
       {
-        this.addAll();
+        this.addEateries();
         return;
       }
+
       this.$("#eatery-list").empty();
-      var filtered = Eateries.filter(function(eatery){return eatery.attributes.cuisines.includes(value);});
-      filtered.forEach(this.addOne, this);
+      var allEateries = Eateries;
+      var filtered = Eateries.filter(function(eatery) 
+      {
+        var match = false;
+        for (var i = 0; i < filters.length; i ++) {
+          if (eatery.get("cuisines").includes(filters[i])) {
+            match = true;
+            break;
+          }
+        }
+        return match;
+      });
+      filtered.forEach(this.addEatery, this);
     },
 
     render: function() {
@@ -138,22 +208,20 @@ $(function(){
       }
     },
 
-    addOne: function(eatery) {
+    addFilter: function(filter){
+      var view = new CuisineFilterView({model: filter});
+      this.$("#cuisine-list").append(view.render().el);
+      this.listenTo(view, "filterClicked", this.updateEateries);
+    },
+
+    addEatery: function(eatery) {
       var view = new EateryView({model: eatery});
       this.$("#eatery-list").append(view.render().el);
     },
 
-    addAll: function() {
+    addEateries: function() {
       this.$("#eatery-list").empty();
-      Eateries.each(this.addOne, this);
-    },
-
-    createOnEnter: function(e) {
-      if (e.keyCode != 13) return;
-      if (!this.input.val()) return;
-
-      Eateries.create({title: this.input.val()});
-      this.input.val('');
+      Eateries.each(this.addEatery, this);
     }
 
   });

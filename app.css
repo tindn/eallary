@@ -29,9 +29,9 @@ header h1 {
 
 #main #cuisine-list li {
 	background-color: #eeeeee;
-	border: 1px solid #cecece;
+	/*border: 1px solid #cecece;*/
 	border-radius: 5px;
-	padding: 10px;
+	padding: 5px 10px;
 	margin-right: 10px;
 	margin-top: 10px;
 }
@@ -39,7 +39,11 @@ header h1 {
 #main #cuisine-list li a,
 #main #cuisine-list li a:visited {
 	text-decoration: none;
-	color:#000;
+	color: #cecece;
+}
+
+#main #cuisine-list li a.set {
+	color: #000;
 }
 
 #main #cuisine-list,
