@@ -7,15 +7,28 @@ body {
 body {
 	font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	color: #333333;
+	color: #323334;
+	background-color: #fdfdfd;
 	max-width: 800px;
 	padding: 0 20px;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 }
 
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+
 header h1 {
 	text-align: center;
+}
+
+a {
+	color: #323334;
+	font-weight: 500;
+	text-decoration: none;
 }
 
 #main {
@@ -43,13 +56,7 @@ header h1 {
 }
 
 #main #cuisine-list li a.set {
-	color: #000;
-}
-
-#main #cuisine-list,
-#main #eatery-list {
-	list-style: none;
-	padding-left: 0;
+	color: #323334;
 }
 
 #main #eatery-list .eatery {
@@ -57,9 +64,12 @@ header h1 {
 	border: 1px solid #cecece;
 	border-radius: 5px;
 	margin: 5px 0;
+	clear: both;
 }
 
 #main #eatery-list .eatery .summary .label {
+	font-weight: 500;
+	font-size: 1.1rem;
 	padding: 20px 10px;
 }
 
@@ -68,12 +78,39 @@ header h1 {
 	margin: 20px;
 }
 
+#main #eatery-list .eatery .summary svg {
+	height: 25px;
+	width: 25px;
+}
+
 #main #eatery-list .eatery .details {
 	display: none;
 	padding: 0 10px 20px 10px;
 }
 
-#main #eatery-list .eatery .icon {
-	height: 20px;
-	width: 20px;
+#main #eatery-list .eatery .details .info-type {
+	clear: both;
+	margin: 10px 0;
+}
+
+#main #eatery-list .eatery .details .icon {
+	float: left;
+	margin: 2px 8px 0 0;
+}
+
+#main #eatery-list .eatery .details .icon svg {
+	height: 18px;
+	width: 18px;
+	color: #323334;
+}
+
+
+#main #eatery-list .eatery .details .hours .title {
+	color: #323334;
+	font-weight: 500;
+}
+
+#main #eatery-list .eatery .details .hours ul {
+	padding-left: 40px;
+	clear: both;
 }

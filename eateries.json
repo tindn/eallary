@@ -20,13 +20,33 @@
         "phone": "(515) 280-3771",
         "menu": "royalmilebar.com",
         "hours": [
-            {"Sunday": "10AM-2AM"},
-            {"Monday": "11AM-2AM"},
-            {"Tuesday": "11AM-2AM"},
-            {"Wednesday": "11AM-2AM"},
-            {"Thursday": "11AM-2AM"},
-            {"Friday": "11AM-2AM"},
-            {"Saturday": "8AM-2AM"}
+            {
+                "day": "Sunday",
+                "hour": "10AM-2AM"
+            },
+            {
+                "day": "Monday",
+                "hour": "11AM-2AM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "11AM-2AM"
+            },
+            {
+                "day": "Weednesday",
+                "hour": "11AM-2AM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "11AM-2AM"
+            },
+            {
+                "day": "Friday",
+                "hour": "11AM-2AM"},
+            {
+                "day": "Saturday",
+                "hour": "8AM-2AM"
+            }
         ],
         "tags": ["bar","pub", "british", "ale", "guinness"],
         "cuisines": ["british", "american"]
@@ -37,13 +57,34 @@
         "phone": "(515) 330-1840",
         "menu": "http://places.singleplatform.com/pho-all-seasons/menu",
         "hours": [
-            {"Sunday": "10AM-9PM"},
-            {"Monday": "10AM-3PM"},
-            {"Tuesday": "10AM-9PM"},
-            {"Wednesday": "10AM-9PM"},
-            {"Thursday": "10AM-9PM"},
-            {"Friday": "10AM-9PM"},
-            {"Saturday": "10AM-9PM"}
+            {
+                "day": "Sunday",
+                "hour": "10AM-9PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "10AM-3PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "10AM-9PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "10AM-9PM"
+            },
+            {
+                "day": "Thursday",
+                "hou": "10AM-9PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "10AM-9PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "10AM-9PM"
+            }
         ],
         "tags": [],
         "cuisines": ["vietnamese"]
@@ -54,13 +95,33 @@
         "phone": "(515) 987-3111",
         "menu": "http://www.shanghaiwk.com/menus/carryout.pdf",
         "hours": [
-            {"Sunday": "11AM-9PM"},
-            {"Monday": "Closed"},
-            {"Tuesday": "11AM-9PM"},
-            {"Wednesday": "11AM-9PM"},
-            {"Thursday": "11AM-9PM"},
-            {"Friday": "11AM-9:30PM"},
-            {"Saturday": "11AM-9:30PM"}
+            {
+                "day": "Sunday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "Closed"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "11AM-9:30PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "11AM-9:30PM"}
         ],
         "tags": [],
         "cuisines": ["vietnamese", "chinese"]
@@ -71,13 +132,34 @@
         "phone": "(515) 255-6011",
         "menu": "http://places.singleplatform.com/jesses-embers/menu",
         "hours": [
-            {"Sunday": "Closed"},
-            {"Monday": "11AM-10PM"},
-            {"Tuesday": "11AM-10PM"},
-            {"Wednesday": "11AM-10PM"},
-            {"Thursday": "11AM-10PM"},
-            {"Friday": "11AM-10PM"},
-            {"Saturday": "5PM-10PM"}
+            {
+                "day": "Sunday",
+                "hour": "Closed"
+            },
+            {
+                "day": "Monday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "5PM-10PM"
+            }
         ],
         "tags": ["burgers"],
         "cuisines": ["american"]
@@ -88,13 +170,34 @@
         "phone": "(515) 282-8085",
         "menu": "http://www.opentable.com/eatery-a",
         "hours": [
-            {"Sunday": "10AM-10PM"},
-            {"Monday": "3PM-11PM"},
-            {"Tuesday": "3PM-11PM"},
-            {"Wednesday": "3PM-11PM"},
-            {"Thursday": "3PM-11PM"},
-            {"Friday": "10AM-12AM"},
-            {"Saturday": "10AM-12AM"}
+            {
+                "day": "Sunday",
+                "hour": "10AM-10PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "3PM-11PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "3PM-11PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "3PM-11PM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "3PM-11PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "10AM-12AM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "10AM-12AM"
+            }
         ],
         "tags": ["burgers", "pizza", "happy hour", "bar"],
         "cuisines": ["mediterranean", "american"]
