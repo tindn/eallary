@@ -201,5 +201,43 @@
         ],
         "tags": ["burgers", "pizza", "happy hour", "bar"],
         "cuisines": ["mediterranean", "american"]
+    },
+    {
+        "name": "Noodles and Co",
+        "address": "2325 SE Delaware Ave, Ankeny, IA 50021",
+        "phone": "(515) 965-4419",
+        "menu": "http://www.noodles.com/menu/",
+        "hours": [
+            {
+                "day": "Sunday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "10:30AM-9PMM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "10:30AM-10PM"
+            }
+        ],
+        "tags": [],
+        "cuisines": ["world", "noodles"]
     }
 ]
