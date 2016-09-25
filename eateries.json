@@ -49,7 +49,7 @@
             }
         ],
         "tags": ["bar","pub", "british", "ale", "guinness"],
-        "cuisines": ["british", "american"]
+        "cuisines": ["british"]
     },
     {
         "name": "Pho All Seasons",
@@ -75,7 +75,7 @@
             },
             {
                 "day": "Thursday",
-                "hou": "10AM-9PM"
+                "hour": "10AM-9PM"
             },
             {
                 "day": "Friday",
@@ -162,7 +162,7 @@
             }
         ],
         "tags": ["burgers"],
-        "cuisines": ["american"]
+        "cuisines": []
     },
     {
         "name": "Eatery A",
@@ -200,7 +200,7 @@
             }
         ],
         "tags": ["burgers", "pizza", "happy hour", "bar"],
-        "cuisines": ["mediterranean", "american"]
+        "cuisines": ["mediterranean"]
     },
     {
         "name": "Noodles and Co",
@@ -238,6 +238,6 @@
             }
         ],
         "tags": [],
-        "cuisines": ["world", "noodles"]
+        "cuisines": ["thai", "korean", "noodles"]
     }
 ]

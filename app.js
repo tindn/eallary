@@ -16,6 +16,58 @@ $(function(){
       if (!this.get("name")) {
         this.set({"name": this.defaults().name});
       }
+    },
+
+    isCurrentlyOpen: function() {
+      var currentTime = new Date();
+      var dayOfWeek = currentTime.getDay();
+
+      if(!(this.get("hours")) || (!this.get("hours")[dayOfWeek]))
+      {
+        return true;
+      }
+
+      var year = currentTime.getFullYear();
+      var date = currentTime.getDate();
+      var month = currentTime.getMonth();
+      var hoursString = this.get("hours")[dayOfWeek].hour;
+      var hoursRegex = /(\d+\W*\d*\w{2})\W*(\d+\W*\d*\w{2})/;
+      var hoursArray = hoursRegex.exec(hoursString);
+      if (!hoursArray)
+      {
+        return true;
+      }
+      
+      var hourMinuteRegex = /(\d+)\W*(\d*)(\w{2})/;
+      var openTimeArray = hourMinuteRegex.exec(hoursArray[1]);
+      var openTime = new Date(year, month, date, openTimeArray[1], openTimeArray[2]);
+      if (openTimeArray[3] === "PM" || openTimeArray[3] === "pm")
+      {
+        openTime.setHours(openTime.getHours() + 12);
+      }
+
+      if(openTimeArray[1] === "12" && (openTimeArray[3] === "AM" || openTimeArray[3] === "am")) 
+      {
+        openTime.setHours(openTime.getHours() + 12); 
+      }
+
+      var closeTimeArray = hourMinuteRegex.exec(hoursArray[2]);
+      var closeTime = new Date(year, month, date, closeTimeArray[1], closeTimeArray[2]);
+      if (closeTimeArray[3] === "PM" || closeTimeArray[3] === "pm")
+      {
+        closeTime.setHours(closeTime.getHours() + 12);
+      }
+
+      if(closeTimeArray[1] === "12" && (closeTimeArray[3] === "AM" || closeTimeArray[3] === "am")) 
+      {
+        closeTime.setHours(closeTime.getHours() + 12); 
+      }
+
+      if (closeTime < openTime) {
+        closeTime.setHours(closeTime.getHours() + 24);
+      }
+      
+      return (currentTime >= openTime && currentTime < closeTime);
     }
   });
 
@@ -24,8 +76,8 @@ $(function(){
     // Reference to this collection's model.
     model: Eatery,
 
-    url: "./eateries.json",
-
+    //url: "./eateries.json",
+    url: "http://pixiecloud.herokuapp.com/eallary/eateries",
     // We keep the Todos in sequential order, despite being saved by unordered
     // GUID in the database. This generates the next order number for new items.
     nextOrder: function() {
@@ -216,6 +268,7 @@ $(function(){
 
     addEatery: function(eatery) {
       var view = new EateryView({model: eatery});
+      eatery.isCurrentlyOpen();
       this.$("#eatery-list").append(view.render().el);
     },
 

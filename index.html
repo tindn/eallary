@@ -52,7 +52,12 @@
 			<path d="M0 0h24v24H0z" fill="none"/>
 		</svg>
 		</a>
-		<div class="label"><%- name %></div>
+		<div class="label"><%- name %> <%
+		if(!this.model.isCurrentlyOpen()) {%>
+			<span class="closed">(closed)</span>
+			<%}%>
+		</div>
+		
 	</div>
 
 	<div class="details">

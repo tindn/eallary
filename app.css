@@ -73,6 +73,12 @@ a {
 	padding: 20px 10px;
 }
 
+#main #eatery-list .eatery .summary .closed {
+	padding-left: 10px;
+	color: red;
+	font-size: 0.9rem;
+}
+
 #main #eatery-list .eatery .summary a {
 	float: right;
 	margin: 20px;
@@ -89,7 +95,7 @@ a {
 }
 
 #main #eatery-list .eatery .details a {
-	font-weight: 500;
+	font-weight: 600;
 	text-decoration: none;
 }
 
@@ -111,6 +117,7 @@ a {
 
 #main #eatery-list .eatery .details .hours .title {
 	color: #323334;
+	font-weight: 500;
 }
 
 #main #eatery-list .eatery .details .hours ul {
