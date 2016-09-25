@@ -200,7 +200,7 @@
             }
         ],
         "tags": ["burgers", "pizza", "happy hour", "bar"],
-        "cuisines": ["mediterranean"]
+        "cuisines": ["bar", "pizza"]
     },
     {
         "name": "Noodles and Co",
@@ -239,5 +239,151 @@
         ],
         "tags": [],
         "cuisines": ["thai", "korean", "noodles"]
+    },
+    {
+        "name": "Chipotle Merle Hay",
+        "address": "3737 Merle Hay Rd #100, Des Moines, IA 50310",
+        "phone": "(515) 974-4300",
+        "menu": "http://www.chipotle.com/",
+        "hours": [
+            {
+                "day": "Sunday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "11AM-10PM"
+            }
+        ],
+        "tags": [],
+        "cuisines": ["mexican"]
+    },
+    {
+        "name": "Qdoba Ingersoll",
+        "address": "2105 Ingersoll Ave #104, Des Moines, IA 50312",
+        "phone": "(515) 619-5358",
+        "hours": [
+            {
+                "day": "Sunday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "10:30AM-10PM"
+            }
+        ],
+       "cuisines": ["mexican"]
+    },
+    {
+        "name": "Qdoba University",
+        "address": "Westridge Shopping Center, 10201 University Ave, Clive, IA 50325",
+        "phone": "(515) 440-3885",
+        "hours": [
+            {
+                "day": "Sunday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "10:30AM-9PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "10:30AM-10PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "10:30AM-10PM"
+            }
+        ],
+        "cuisines": ["mexican"]
+    },
+    {
+        "name": "Pepperjax Ankeny",
+        "address": "2010 SE Delaware Ave, Ankeny, IA 50021",
+        "phone": "(515) 964-3311",
+        "hours": [
+            {
+                "day": "Sunday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Monday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Tuesday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Wednesday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Thursday",
+                "hour": "11AM-9PM"
+            },
+            {
+                "day": "Friday",
+                "hour": "11AM-10PM"
+            },
+            {
+                "day": "Saturday",
+                "hour": "11AM-10PM"
+            }
+        ],
+        "cuisines": [""]
     }
 ]

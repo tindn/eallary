@@ -76,8 +76,8 @@ $(function(){
     // Reference to this collection's model.
     model: Eatery,
 
-    //url: "./eateries.json",
-    url: "http://pixiecloud.herokuapp.com/eallary/eateries",
+    url: "./eateries.json",
+    //url: "http://pixiecloud.herokuapp.com/eallary/eateries",
     // We keep the Todos in sequential order, despite being saved by unordered
     // GUID in the database. This generates the next order number for new items.
     nextOrder: function() {
